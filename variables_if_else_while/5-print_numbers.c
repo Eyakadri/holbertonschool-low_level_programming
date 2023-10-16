@@ -6,18 +6,18 @@
  */
 int main(void)
 {
-    int x = 0;
+int x = 0;
 
-    while (x < 10)
-    {
-    printf("%d", x);
-    if (x < 9)
-    {
+while (x < 10)
+{
+printf("%d", x);
+if (x < 9)
+{
 
-    }
-    x++;
-    }
-    printf("\n");
+}
+x++;
+}
+printf("\n");
 
-    return (0);
+return (0);
 }
