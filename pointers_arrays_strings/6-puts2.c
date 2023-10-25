@@ -2,7 +2,7 @@
 /**
  * puts2 - a function that prints every other character of a string
  * @str: string
-*/
+ */
 void puts2(char *str)
 {
 	int i = 0;
@@ -12,9 +12,7 @@ void puts2(char *str)
 		_putchar(str[i]);
 		i++;
 		if (str[i] != '\0')
-		{
-			_putchar('\n');
-		}
-		i++;
+			i++;
 	}
+	_putchar('\n');
 }
