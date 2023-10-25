@@ -5,7 +5,7 @@
 */
 void puts_half(char *str)
 {
-	 int length = strlen(str);
+	 int l = strlen(str);
 
-printf("%s\n", str + (length + 1) / 2);
+printf("%s\n", str + (l + 1) / 2);
 }
