@@ -1,28 +1,37 @@
 #include "main.h"
 /**
- * _sqrt_recursion - a function that returns the natural square root
- * @n: nmbr
- * Return: -1 , i ot 1
+ * support_fonction - check code
+ * @a: int
+ * @b: int
+ * Return: b or -1
  */
-int _sqrt_recursion(int n)
+int support_fonction(int a, int b)
 {
-	if (n < 0)
+	if (b * b == a)
+	{
+		return (b);
+	}
+	else if (b * b > a)
 	{
 		return (-1);
 	}
-	else if (n == 0 || n == 1)
 	{
-		return (1);
+		return (support_fonction(a, b + 1));
+	}
+}
+/**
+ * _sqrt_recursion - a function that returns the natural square
+ * @n: nmbr
+ * Return: -1
+*/
+int _sqrt_recursion(int n)
+{
+	if (n > 0)
+	{
+		return (support_fonction(n, 1));
 	}
 	else
 	{
-		int i = 1;
-
-		while (i * i <= n)
-		{
-			i++;
-		}
-		i--;
-		return (i);
+		return (-1);
 	}
 }
