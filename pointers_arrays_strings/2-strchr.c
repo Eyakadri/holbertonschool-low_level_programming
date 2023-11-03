@@ -4,12 +4,12 @@
  * @s: string
  * @c: character
  * Return: s or NULL
-*/
+ */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+	if (*s == c)
 	{
-		if (*s == c)
+		while (*s != '\0')
 		{
 			return (s);
 		}
