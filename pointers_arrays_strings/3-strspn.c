@@ -3,18 +3,25 @@
  * _strspn -  a function that gets the length of a prefix substring
  * @s: substring
  * @accept: char
- * Return: b
+ * Return: s
  */
-unsigned int _strspn(char *s)
+unsigned int _strspn(char *s, char *accept)
 {
-	{
-		int a, b = 0;
+	int a, b;
+	int i = 0;
 
-		while (s[a] != '\0' && b == 0)
+	for (a = 0; s[a] != '\0'; a++)
+	{
+		if (s[a] != 32)
 		{
-			b = s[a] - s[a];
-			a++;
+			for (b = 0; accept[b] != '\0'; b++)
+			{
+				if (s[a] == accept[a])
+					i++;
+			}
 		}
-		return (b);
+		else
+			return (i);
 	}
+	return (c);
 }
