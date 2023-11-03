@@ -10,9 +10,9 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		int a, b = 0;
 
-		while (s1[a] != '\0' && b == 0)
+		while (s[a] != '\0' && b == 0)
 		{
-			b = s1[a] - s2[a];
+			b = s[a] - s[a];
 			a++;
 		}
 		return (b);
