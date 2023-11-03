@@ -4,7 +4,7 @@
  * @s: string
  * @c: character
  * Return: s or NULL
-*/
+ */
 char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
@@ -15,6 +15,9 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	if ( *s == c)
+	if (*s == c)
+	{
+		return (s);
+	}
 	return (NULL);
 }
