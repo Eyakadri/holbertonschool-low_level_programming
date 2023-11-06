@@ -4,28 +4,25 @@
  * @haystack: string
  * @needle: substring
  * Return: NULL
- */
+*/
 char *_strstr(char *haystack, char *needle)
 {
-	int hayst = strlen(haystack);
-	int needl = strlen(needle);
-
-	for (int a = 0; a <= hayst - needl; a++)
+	while (*haystack)
 	{
-		int b;
+		char *a = haystack;
+		char *b = needle;
 
-		for (b = 0; b < needl; b++)
+		while (*a && *b && *a == *b)
 		{
-			if (haystack[a + b] != needle[b])
-			{
-				break;
-			}
+			a++;
+			b++;
 		}
-		if (b == needl)
+
+		if (*b == '\0')
 		{
-			return (&haystack[a]);
+			return (haystack);
 		}
+		haystack++;
 	}
-
 	return (NULL);
 }
