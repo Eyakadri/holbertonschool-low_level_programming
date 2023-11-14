@@ -1,0 +1,17 @@
+#ifndef dog_p
+#define dog_p
+
+#include <stdio.h>
+/**
+ * struct dog - dog structure
+ * @name: name of dog
+ * @age: age of dog
+ * @owner: owner of dog
+*/
+typedef struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+} dog_p;
+#endif
