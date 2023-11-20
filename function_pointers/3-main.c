@@ -16,15 +16,15 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	f = get_op_func(argv[2]);
-	if (f == NULL)
+	 c= get_op_func(argv[2]);
+	if (c == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 	a = atoi(argv[1]);
 	b = atoi(argv[3]);
-	c = f(a, b);
-	printf("%d\n", c);
+	
+	printf("%d\n", f(a, b));
 	return (0);
 }
