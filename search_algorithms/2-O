@@ -1,1 +1,1 @@
-echo "O(n) "
+echo "O(n)" | sed 's/ *$//'
